@@ -19,20 +19,18 @@ var complimentsController = {
     // redirect to compliment
     res.redirect("/compliments")
   },
-<<<<<<< HEAD
-  
+
   update: function(req, res) {
     var id = parseInt(req.params.id);
     var updatedCompliment = Compliment.find(id)
     updatedCompliment = req.body.compliment;
     res.redirect("/compliments/" + id)
-=======
+  },
   edit: function(req, res){
     res.render('compliments/edit.hbs', {
       id: req.params.id,
       compliment: Compliment.find([req.params.id])
     });
->>>>>>> edit-controller-feature
   }
 
  // update action code goes here...
